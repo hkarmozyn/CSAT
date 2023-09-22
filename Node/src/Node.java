@@ -16,6 +16,9 @@ public class Node<T> {
     public Node(){
 
     }
+    public Node(T data){
+        this.data=data;
+    }
 
 
     public Node(T data,Node parent, Node child){
@@ -39,14 +42,15 @@ public class Node<T> {
     }
     public void setData(T data){ this.data=data;}
 
-    public String toString(Node n){
-        return "Node:";
+    public String toString(){
+        return "Node:" +this.data;
     }
 
 
 
-    public boolean equals(Node n1, Node n2){
-        return n1.equals(n2);
+    public boolean equals(Node n1){
+
+        return this.data.equals(n1.getData());
 
 
     }
